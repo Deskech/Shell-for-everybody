@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -13,10 +12,10 @@ public class Main {
 
             if (input.equals("exit 0")) {
                 exit = true;
-            } else if(input.matches("^echo .+")) {
-               String filteredData = input.replace("echo","");
-               System.out.println(filteredData);
-            }else {
+            } else if (input.matches("^echo .+")) {
+                String filteredData = input.replace("echo", " ");
+                System.out.println(filteredData);
+            } else {
                 System.out.println(input + ": command not found");
             }
 
