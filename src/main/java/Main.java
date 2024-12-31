@@ -13,7 +13,7 @@ public class Main {
             if (input.equals("exit 0")) {
                 exit = true;
             } else if (input.matches("^echo .+")) {
-                String filteredData = input.replace("echo", " ");
+                String filteredData = input.replace("echo", "").trim();
                 System.out.println(filteredData);
             } else {
                 System.out.println(input + ": command not found");
