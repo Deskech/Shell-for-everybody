@@ -1,17 +1,27 @@
 package Commads;
 
+import services.Arguments;
 import services.CommandChecker;
+import services.PathChecker;
 
 public class TypeCommand implements Command {
 
 
     @Override
     public void execute(String input) {
+        String argument = Arguments.extract(input).trim();
         CommandChecker commandChecker = new CommandChecker();
-        if (commandChecker.isValid(input)) {
-            System.out.println(input + " is a shell builtin");
+
+
+        String filePath = PathChecker.finExecutable(argument);
+
+
+        if (commandChecker.isValid(argument)) {
+            System.out.println(argument + " is a shell builtin");
+        } else if (filePath != null) {
+            System.out.println(argument + " is "+ filePath);
         } else {
-            System.out.println(input + ": not found");
+            System.out.println(argument + ": not found");
         }
 
     }

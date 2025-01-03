@@ -1,5 +1,6 @@
+import Commads.PwdCommand;
 import Commads.TypeCommand;
-import services.Arguments;
+import services.Program;
 
 import java.util.Scanner;
 
@@ -22,8 +23,12 @@ public class Main {
                 System.out.println(filteredData);
             } else if (input.matches("^type .+")) {
                 TypeCommand typeCommand = new TypeCommand();
-                String argument = Arguments.extract(input);
-                typeCommand.execute(argument);
+                typeCommand.execute(input);
+            } else if (input.matches("^pwd")) {
+                PwdCommand pwdCommand = new PwdCommand();
+                pwdCommand.execute(input);
+            } else if (!input.isEmpty()) {
+                Program.execute(input);
             } else {
                 System.out.println(input + ": command not found");
             }
