@@ -6,9 +6,9 @@ public class PwdCommand implements Command{
 
     @Override
     public void execute(String input) {
-        String workingDirectory = Paths.get("")
+        String workingDirectories = Paths.get("")
                 .toAbsolutePath()
                 .toString();
-        System.out.println(workingDirectory);
+        System.out.println(workingDirectories);
     }
 }
