@@ -28,6 +28,7 @@ public class Program {
 
             StringBuilder output = new StringBuilder();
 
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
 

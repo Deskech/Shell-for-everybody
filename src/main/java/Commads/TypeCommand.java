@@ -13,13 +13,13 @@ public class TypeCommand implements Command {
         CommandChecker commandChecker = new CommandChecker();
 
 
-        String filePath = PathChecker.finExecutable(argument);
+        String executable = PathChecker.finExecutable(argument);
 
 
         if (commandChecker.isValid(argument)) {
             System.out.println(argument + " is a shell builtin");
-        } else if (filePath != null) {
-            System.out.println(argument + " is "+ filePath);
+        } else if (executable != null) {
+            System.out.println(argument + " is "+ executable);
         } else {
             System.out.println(argument + ": not found");
         }
