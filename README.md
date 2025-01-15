@@ -1,6 +1,6 @@
-# **My Shell** 
+# **Shell for everybody** 
 
-Welcome to **My Shell**, a simple command-line interface (CLI) program that mimics basic functionalities of a shell. It's designed to execute commands and interact with the user, offering a straightforward and user-friendly experience.
+Welcome to **Shell for everybody**, a simple command-line interface (CLI) program that mimics basic functionalities of a shell. It's designed to execute commands and interact with the user, offering a straightforward and user-friendly experience.
 
 ## 📂 **Features**
 
@@ -11,7 +11,7 @@ Welcome to **My Shell**, a simple command-line interface (CLI) program that mimi
    - Syntax: `tog "text to save" > /path/to/file.txt`
    - Example:
      ```bash
-     $ n "Hello, World!" > ~/Documents/hello.txt
+     $ tog "Hello, World!" > ~/Documents/hello.txt
      ```
 
   - **Echo a String**:
