@@ -11,11 +11,11 @@ public class PathChecker {
         if (pathVariable == null) {
             return null;
         }
-        String[] pathList = pathVariable.split(";");
+        String[] pathList = pathVariable.split(":");
 
         for (String dir : pathList) {
-            String fullPath = dir + "\\" + argument;
-            String fullPathExe = dir + "\\" + argument + ".exe";
+            String fullPath = dir + "/" + argument;
+            String fullPathExe = dir + "/" + argument + ".exe";
             File f = new File(fullPath);
             File fileExe = new File(fullPathExe);
             if (f.exists() && f.canExecute()) {

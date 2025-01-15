@@ -1,35 +1,89 @@
-[![progress-banner](https://backend.codecrafters.io/progress/shell/8eaca2f8-117f-4109-8516-12c560055c0d)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# **My Shell** 
 
-This is a starting point for Java solutions to the
-["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview).
+Welcome to **My Shell**, a simple command-line interface (CLI) program that mimics basic functionalities of a shell. It's designed to execute commands and interact with the user, offering a straightforward and user-friendly experience.
 
-In this challenge, you'll build your own POSIX compliant shell that's capable of
-interpreting shell commands, running external programs and builtin commands like
-cd, pwd, echo and more. Along the way, you'll learn about shell command parsing,
-REPLs, builtin commands, and more.
+## 📂 **Features**
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+### ✅ **Basic Commands**
 
-# Passing the first stage
+- **Create a File**:
+   - Allows you to create a new text file with specific content in a designated location.
+   - Syntax: `tog "text to save" > /path/to/file.txt`
+   - Example:
+     ```bash
+     $ n "Hello, World!" > ~/Documents/hello.txt
+     ```
 
-The entry point for your `shell` implementation is in `src/main/java/Main.java`.
-Study and uncomment the relevant code, and push your changes to pass the first
-stage:
+  - **Echo a String**:
+     - Echoes a string back to the terminal.
+     - Syntax: `echo "Your Text"`
+     - Example:
+    ```bash 
+    $ echo "This is a test"
+       ```
+  - **Edit and read files**:
+    - Usage to read a file:
+    ```bash
+    $ cat /path/to/file.txt -r 
+    ```
+     -  Usage to edit a file:
+      ```bash
+      $ cat ~/Documents/example.txt -e
+      ```
+   - **Type command**:
+  - Displays the type of command (whether it's a built-in shell command, a function, etc.).
+  - Usage:
+    ```bash
+    type command_name
+    ```
+  - Example:
+    ```bash
+    type echo
+    ```
+  - **Exit**:
+   - Terminates the shell program.
+   - Usage:
+     ```bash
+     exit 0
+     ```
+   - Description: Exits the shell with status `0`. If no arguments or incorrect syntax are provided, it shows an error.
+### 🔄 **File and Directory Management**
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
-```
+- **Change Directory**:
+   - Allows you to navigate between directories.
+   - Syntax: `cd /path/to/directory`
+   - Example:
+     ```bash
+     $ cd ~/Documents
+     ```
 
-Time to move on to the next stage!
+- **Print Working Directory**:
+   - Lists files and directories in the current directory.
+   - Syntax: `pw`
+   - Example:
+     ```bash
+     $ pwd
+     ```
 
-# Stage 2 & beyond
 
-Note: This section is for stages 2 and beyond.
+###  **Advanced Functionality**
 
-1. Ensure you have `mvn` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `src/main/java/Main.java`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+- **File Creation with Redirect (`>`)**:
+   - The shell supports redirection to create files with user-defined content.
+   - Syntax: `tog "text" > /path/to/file.txt`
+   - The content inside the quotation marks will be written to the file at the specified location.
+
+
+## ⚙️ **Installation**
+
+1. Clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/yourusername/my-shell.git
+    ```
+
+
+## 📝 **Usage**
+
+- To create a file with content:
+  ```bash
+  n "Your text to save" > /path/to/file.txt

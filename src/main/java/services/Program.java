@@ -45,9 +45,7 @@ public class Program {
                 throw new RuntimeException(e);
             }
 
-
         } else {
-
             System.out.println(command + ": command not found");
 
         }

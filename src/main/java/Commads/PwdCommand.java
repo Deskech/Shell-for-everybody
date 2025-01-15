@@ -1,14 +1,17 @@
 package Commads;
 
-import java.nio.file.Paths;
+import Context.ShellContext;
 
-public class PwdCommand implements Command{
+public class PwdCommand implements Command {
+    private final ShellContext shellContext;
+
+    public PwdCommand(ShellContext shellContext) {
+        this.shellContext = shellContext;
+    }
 
     @Override
     public void execute(String input) {
-        String workingDirectories = Paths.get("")
-                .toAbsolutePath()
-                .toString();
-        System.out.println(workingDirectories);
+
+        System.out.println(shellContext.getCurrentWorkingDirectory());
     }
 }

@@ -9,7 +9,7 @@ public class TypeCommand implements Command {
 
     @Override
     public void execute(String input) {
-        String argument = Arguments.extract(input).trim();
+        String argument = Arguments.extract(input);
         CommandChecker commandChecker = new CommandChecker();
 
 
