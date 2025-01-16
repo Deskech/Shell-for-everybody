@@ -80,10 +80,3 @@ Welcome to **Shell for everybody**, a simple command-line interface (CLI) progra
     ```bash
     git clone https://github.com/yourusername/my-shell.git
     ```
-
-
-## 📝 **Usage**
-
-- To create a file with content:
-  ```bash
-  n "Your text to save" > /path/to/file.txt
